@@ -1,5 +1,9 @@
+@import '../libs/vars';
+@import '../libs/functions';
+@import '../libs/mixins';
+
 ///
-/// Forty by HTML5 UP
+/// Eventually by HTML5 UP
 /// html5up.net | @ajlkn
 /// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 ///
@@ -9,52 +13,39 @@
 	form {
 		margin: 0 0 _size(element-margin) 0;
 
-		.field {
-			margin: 0 0 (_size(element-margin) * 1) 0;
+		.message {
+			@include icon;
+			@include vendor('transition', (
+				'opacity #{_duration(transition)} ease-in-out',
+				'transform #{_duration(transition)} ease-in-out'
+			));
+			@include vendor('transform', 'scale(1.05)');
+			height: _size(element-height);
+			line-height: _size(element-height);
+			opacity: 0;
 
-			&.half {
-				width: 50%;
-				float: left;
-				padding: 0 0 0 (_size(element-margin) * 1 * 0.5);
-
-				&.first {
-					padding: 0 (_size(element-margin) * 1 * 0.5) 0 0;
-				}
+			&:before {
+				margin-right: 0.5em;
 			}
-		}
 
-		> .actions {
-			margin: (_size(element-margin) * 1.25) 0 0 0 !important;
-		}
+			&.visible {
+				@include vendor('transform', 'scale(1)');
+				opacity: 1;
+			}
 
-		@include breakpoint(small) {
-			.field {
-				margin: 0 0 (_size(element-margin) * 0.75) 0;
+			&.success {
+				color: _palette(positive, bg);
 
-				&.half {
-					padding: 0 0 0 (_size(element-margin) * 0.75 * 0.5);
-
-					&.first {
-						padding: 0 (_size(element-margin) * 0.75 * 0.5) 0 0;
-					}
+				&:before {
+					content: '\f00c';
 				}
 			}
 
-			> .actions {
-				margin: (_size(element-margin) * 1) 0 0 0 !important;
-			}
-		}
+			&.failure {
+				color: _palette(negative, bg);
 
-		@include breakpoint(xsmall) {
-			.field {
-				&.half {
-					width: 100%;
-					float: none;
-					padding: 0;
-
-					&.first {
-						padding: 0;
-					}
+				&:before {
+					content: '\f119';
 				}
 			}
 		}
@@ -63,23 +54,32 @@
 	label {
 		color: _palette(fg-bold);
 		display: block;
-		font-size: 0.8em;
+		font-size: 0.9em;
 		font-weight: _font(weight-bold);
-		letter-spacing: _font(letter-spacing-alt);
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
-		text-transform: uppercase;
+	}
+
+	@include keyframes(focus) {
+		0% { @include vendor('transform', 'scale(1)'); }
+		50% { @include vendor('transform', 'scale(1.025)'); }
+		100% { @include vendor('transform', 'scale(1)'); }
 	}
 
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
-	input[type="tel"],
 	select,
 	textarea {
 		@include vendor('appearance', 'none');
-		background: _palette(border-bg);
+		@include vendor('transform', 'scale(1)');
+		@include vendor('transition', (
+			'border-color #{_duration(transition)} ease',
+			'background-color #{_duration(transition)} ease'
+		));
+		background-color: transparent;
+		border-radius: _size(border-radius);
 		border: none;
-		border-radius: 0;
+		border: solid _size(border-width) _palette(border);
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -92,8 +92,9 @@
 		}
 
 		&:focus {
-			border-color: _palette(highlight);
-			box-shadow: 0 0 0 2px _palette(highlight);
+			@include vendor('animation', 'focus 0.1s');
+			background-color: _palette(border-bg);
+			border-color: _palette(accent, bg);
 		}
 	}
 
@@ -147,18 +148,20 @@
 			color: _palette(fg);
 			cursor: pointer;
 			display: inline-block;
+			font-size: 1em;
 			font-weight: _font(weight);
-			padding-left: (_size(element-height) * 0.6) + 1em;
+			padding-left: (_size(element-height) * 0.6) + 0.75em;
 			padding-right: 0.75em;
 			position: relative;
 
 			&:before {
 				background: _palette(border-bg);
+				border-radius: _size(border-radius);
+				border: solid _size(border-width) _palette(border);
 				content: '';
 				display: inline-block;
 				height: (_size(element-height) * 0.6);
 				left: 0;
-				letter-spacing: 0;
 				line-height: (_size(element-height) * 0.575);
 				position: absolute;
 				text-align: center;
@@ -169,16 +172,17 @@
 
 		&:checked + label {
 			&:before {
-				background: _palette(fg-bold);
-				border-color: _palette(highlight);
+				background: _palette(accent, bg);
+				border-color: _palette(accent, bg);
+				color: _palette(accent, fg-bold);
 				content: '\f00c';
-				color: _palette(bg);
 			}
 		}
 
 		&:focus + label {
 			&:before {
-				box-shadow: 0 0 0 2px _palette(highlight);
+				border-color: _palette(accent, bg);
+				box-shadow: 0 0 0 _size(border-width) _palette(accent, bg);
 			}
 		}
 	}
@@ -186,6 +190,7 @@
 	input[type="checkbox"] {
 		& + label {
 			&:before {
+				border-radius: _size(border-radius);
 			}
 		}
 	}

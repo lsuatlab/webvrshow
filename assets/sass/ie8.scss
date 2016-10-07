@@ -4,47 +4,29 @@
 @import 'libs/skel';
 
 /*
-	Forty by HTML5 UP
+	Eventually by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Button */
+/* BG */
 
-	.button {
-		border: solid 2px !important;
-
-		&.next {
-			padding-right: 1.75em;
-
-			&:before, &:after {
-				display: none;
-			}
-		}
+	#bg {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
 	}
 
-/* Tiles */
+/* Type */
 
-	.tiles {
-		article {
-			width: 50%;
-			-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
-			background-size: cover;
-		}
+	body, input, select, textarea {
+		color: _palette(fg-bold);
 	}
 
-/* Banner */
+/* Form */
 
-	#banner {
-		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
-
-		&:after {
-			display: none;
-		}
-	}
-
-/* Menu */
-
-	#menu {
-		background: _palette(bg);
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select,
+	textarea {
+		border: solid _size(border-width) _palette(fg-bold);
 	}
