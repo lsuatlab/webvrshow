@@ -22,6 +22,16 @@ phone: (716) 555-5555
 
 exclude: [old]
 
+#GLYNN
+ftp_host: 'ftp.siggraphdigitalarts.hosting.acm.org'
+ftp_dir: ''
+# ftp_passive: false
+
+# optional
+ftp_port: 21                  # default 21
+ftp_username: 'immersiveexpressions@siggraphdigitalarts.hosting.acm.org'     # default read from stdin
+# ftp_secure: true              # default false
+
 
 # Plugins
 gems:
