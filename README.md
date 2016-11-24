@@ -1,10 +1,10 @@
-##Site for immersive expressions.
+##Site for immersive expressions show
 
-Helpful to use git-ftp to push.
+Helpful to use git-ftp to push:
 
-`brew install git-ftp`
+1. `brew install git-ftp`
 
-Add the following to .git/config
+2. Add the following to .git/config
 
 ```
 [git-ftp]
@@ -13,4 +13,4 @@ Add the following to .git/config
 	syncroot = _site/
 ```
 
-`git ftp push`
+3. `git ftp push`
