@@ -1,9 +1,8 @@
 ##Site for immersive expressions show
 
-Helpful to use git-ftp to push:
+Helpful to setup git-ftp to push:
 
 1. `brew install git-ftp`
-
 2. Add the following to .git/config
 
 ```
@@ -12,8 +11,7 @@ Helpful to use git-ftp to push:
 	user = immersiveexpressions@siggraphdigitalarts.hosting.acm.org
 	syncroot = _site/
 ```
+To update the site:
 
-3. `jekyll build`
-4. `git ftp push`
-
-Repeat steps 3 and 4 after setting up git-ftp.
+1. `jekyll build`
+2. `git ftp push`
