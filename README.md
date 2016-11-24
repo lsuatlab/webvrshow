@@ -21,6 +21,14 @@ To automatically upload on a git push you could even put the following inside of
 
 ```
 #!/bin/sh
+echo "///START JEKYLL BUILD///"
+jekyll build
+git add -A
+git commit -am "jekyll built"
+echo "///END JEKYLL BUILD///\n"
+
+echo "///START GIT FTP PUSH///"
 git ftp push
+echo "///END GIT FTP PUSH///\n"
 ```
 Then to update the site you only need to: `git push`
