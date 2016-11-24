@@ -36,7 +36,7 @@ nav-menu:
 			{% include call.html %}
 
 		<ul class="actions">
-			<li><span class="button">Submit your work starting November 20, 2016</span></li>
+			<li><span class="button">Submit your work Nov 25</span></li>
 		</ul>
 	</div>
 </section>
