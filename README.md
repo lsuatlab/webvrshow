@@ -13,4 +13,7 @@ Helpful to use git-ftp to push:
 	syncroot = _site/
 ```
 
-3. `git ftp push`
+3. `jekyll build`
+4. `git ftp push`
+
+Repeat steps 3 and 4 after setting up git-ftp.
