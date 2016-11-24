@@ -13,7 +13,7 @@ description: An online digital art exhibition showcasing virtual reality on the 
 # baseurl: "/webvrshow" # the subpath of your site, e.g. /blog
 # url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
 
-exclude: [old]
+exclude: [README.md]
 
 # Plugins
 gems:
