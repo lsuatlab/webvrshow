@@ -37,7 +37,7 @@ nav-menu:
 			{% include call.html %}
 
 		<ul class="actions">
-			<li><a href="https://easychair.org/conferences/?conf=acmsigdac17ie" class="button next">Click to Submit!</a></li>
+			<li><a href="https://easychair.org/conferences/?conf=acmsigdac17ie" class="button next">Click to Submit</a></li>
 		</ul>
 	</div>
 </section>
