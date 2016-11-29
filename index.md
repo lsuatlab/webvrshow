@@ -18,6 +18,7 @@ nav-menu:
 			<p style="text-transform: uppercase;">{{ site.description }}</p>
 			<ul class="actions">
 				<!-- <li><a href="#one" class="button next scrolly">Submit in	 Nov.</a></li> -->
+				<li><a href="https://easychair.org/conferences/?conf=acmsigdac17ie" class="button next scrolly">Click to Submit!</a></li>
 			</ul>
 		</div>
 	</div>
@@ -35,6 +36,9 @@ nav-menu:
 
 			{% include call.html %}
 
+		<ul class="actions">
+			<li><a href="https://easychair.org/conferences/?conf=acmsigdac17ie" class="button next">Click to Submit!</a></li>
+		</ul>
 	</div>
 </section>
 
