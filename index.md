@@ -36,7 +36,7 @@ nav-menu:
 			{% include call.html %}
 
 		<ul class="actions">
-			<li><span class="button">Submit your work Nov 25</span></li>
+			<li><a href="https://easychair.org/conferences/?conf=acmsigdac17ie"><span class="button">Submit your work here</span></a></li>
 		</ul>
 	</div>
 </section>
