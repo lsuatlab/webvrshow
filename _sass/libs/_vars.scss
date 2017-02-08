@@ -28,19 +28,20 @@
 		letter-spacing-alt:	0.25em
 	);
 
+// Palette.
 	$palette: (
-		bg:					#0F1316,
-		bg-alt:				#232C33,
+		bg:					#242943,
+		bg-alt:				#2a2f4a,
 		fg:					#ffffff,
 		fg-bold:			#ffffff,
 		fg-light:			rgba(244,244,255,0.2),
 		border:				rgba(212,212,255,0.1),
 		border-bg:			rgba(212,212,255,0.035),
-		highlight:			#CBEF43,
-		accent1:			#011627,
-		accent2:			#FF0022,
-		accent3:			#CBEF43,
-		accent4:			#EFEFEF,
-		accent5:			#41EAD4,
-		accent6:			#C11AE5
+		highlight:			#9bf1ff,
+		accent1:			#6fc3df,
+		accent2:			#8d82c4,
+		accent3:			#ec8d81,
+		accent4:			#e7b788,
+		accent5:			#8ea9e8,
+		accent6:			#87c5a4
 	);
