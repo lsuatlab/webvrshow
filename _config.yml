@@ -14,9 +14,9 @@ logo: /assets/images/webwhite.svg
 exclude: [README.md]
 
 # Plugins
-gems:
-  - jekyll-sitemap
-  - jekyll-seo-tag
+# gems:
+  # - jekyll-sitemap
+  # - jekyll-seo-tag
 #   - jemoji
 
 # Homepage tiles
