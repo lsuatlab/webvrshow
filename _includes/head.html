@@ -1,6 +1,15 @@
 <head>
 	<title>{{ site.title }}</title>
-	{% seo %}
+
+	<!-- BEGIN SEO -->
+	<meta property="og:title" content="Immersive Expressions" />
+	<meta name="description" content="An online digital art exhibition showcasing virtual reality on the web" />
+	<meta property="og:description" content="An online digital art exhibition showcasing virtual reality on the web" />
+	<meta property="og:url" content="http://immersive-expressions.siggraph.org/" />
+	<meta property="og:site_name" content="Immersive Expressions" />
+	<meta property="og:image" content="{{ "assets/images/webwhite.svg" | absolute_url }}"" />
+	<!-- END SEO -->
+
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<!--[if lte IE 8]><script src="{{ site.url }}{{ site.baseurl }}/assets/js/ie/html5shiv.js"></script><![endif]-->
