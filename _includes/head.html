@@ -2,12 +2,14 @@
 	<title>{{ site.title }}</title>
 
 	<!-- BEGIN SEO -->
-	<meta property="og:title" content="{{ site.title }}" />
-	<meta name="description" content="{{ site.description }}" />
-	<meta property="og:description" content="{{ site.description }}" />
 	<meta property="og:url" content="{{ site.url }}" />
-	<meta property="og:site_name" content="{{ site.title }}" />
+	<meta property="og:type" content="Website" />
+	<meta property="og:title" content="{{ site.title }}" />
+	<meta property="og:description" content="{{ site.description }}" />
 	<meta property="og:image" content="{{ "assets/images/banner2.jpg" | absolute_url }}" />
+
+	<meta name="description" content="{{ site.description }}" />
+	<!-- <meta property="og:site_name" content="{{ site.title }}" /> -->
 	<!-- END SEO -->
 
 	<meta charset="utf-8" />
