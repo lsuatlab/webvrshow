@@ -6,8 +6,10 @@ email: youremailaddress@gmail.com
 description: An online digital art exhibition showcasing virtual reality on the web
 # baseurl: "/webvrshow" # the subpath of your site, e.g. /blog
 # url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
-image: assets/images/banner.png
 url: http://immersive-expressions.siggraph.org
+image: /assets/images/banner.png
+author: ACM SIGGRAPH Digital Arts Community
+logo: /assets/images/webwhite.svg
 
 exclude: [README.md]
 
