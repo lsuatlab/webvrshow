@@ -1,4 +1,4 @@
-## Site for immersive expressions show
+## Site for immersive expressions
 
 Helpful to setup git-ftp to push:
 
