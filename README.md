@@ -9,6 +9,7 @@ Helpful to setup git-ftp to push:
 [git-ftp]
 	url = ftp.siggraphdigitalarts.hosting.acm.org
 	user = immersiveexpressions@siggraphdigitalarts.hosting.acm.org
+	password = PASSWORD
 	syncroot = _site/
 ```
 To update the site:
